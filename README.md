@@ -1,6 +1,6 @@
 ## Portfolio
 
-Curated projects that showcase practical scripting and application skills.
+A few fun projects
 
 ### Wi-Fi Channel Viewer (`wifi-channel-tool/`)
 
