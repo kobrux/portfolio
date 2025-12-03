@@ -43,7 +43,7 @@ Map exposed services across a CIDR range using asynchronous sockets, banner
 grabbing, and automatically generated HTML/JSON reports. Ideal for explaining
 safe reconnaissance techniques during interviews.
 
-Run a scan:
+#### Run the CLI
 
 ```bash
 cd network-exposure-scanner
@@ -51,4 +51,11 @@ python3 network_exposure_scanner.py 192.168.1.0/24 \\
   --ports 22,80,443,3389 \\
   --json report.json \\
   --html report.html
+```
+
+#### Run the GUI
+
+```bash
+cd network-exposure-scanner
+python3 scanner_gui.py
 ```

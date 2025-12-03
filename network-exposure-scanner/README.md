@@ -12,9 +12,10 @@ hiring managers can open without installing special tooling.
 - **Human-friendly reporting**: console summary + optional JSON/HTML artifacts.
 - **Safety controls**: concurrency + timeout settings to avoid noisy scans.
 
-## Usage
+## Usage (CLI)
 
 ```bash
+cd network-exposure-scanner
 python3 network_exposure_scanner.py 192.168.1.0/24 \
   --ports 22,80,443,3389 \
   --json report.json \
@@ -48,15 +49,23 @@ JSON saved to report.json
 HTML saved to report.html
 ```
 
+## GUI Usage
+
+A simple Tkinter GUI wrapper is available if you prefer not to use the terminal.
+
+```bash
+cd network-exposure-scanner
+python3 scanner_gui.py
+```
+
+In the GUI you can:
+- Enter a **target CIDR** (for example `192.168.1.0/24`)
+- Optionally customize **ports**, **timeout**, and **concurrency**
+- Set JSON and HTML report file names
+- Click **Run Scan** to start a background scan and see a live log of results
+
 ## Ethics & Safety
 
 Use only on networks you own or have explicit permission to test. The scanner is
 intentionally conservative and does not exploit vulnerabilities—it simply maps
-open services so you can discuss potential mitigations in interviews.
-
-## Portfolio Talking Points
-
-- Explain how asyncio and semaphores keep scans efficient yet polite.
-- Discuss the risk heuristic and how you’d expand it (e.g., CVE lookups).
-- Mention potential future work: integration with Shodan, scheduling, or
-  authenticated scans within lab environments.
+open services so you can review and harden your own environment.
