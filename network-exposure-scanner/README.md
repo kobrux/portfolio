@@ -1,6 +1,6 @@
 # Network Exposure Scanner
 
-A lightweight, portfolio-friendly scanner that inventories network services on a
+A lightweight scanner that inventories network services on a
 CIDR range and highlights risky exposures. Generates JSON and HTML reports that
 hiring managers can open without installing special tooling.
 
