@@ -36,3 +36,19 @@ On macOS, the tools will:
 On Linux, they use:
 - `nmcli` (NetworkManager) when present.
 - `iwconfig` as a fallback.
+
+### Network Exposure Scanner (`network-exposure-scanner/`)
+
+Map exposed services across a CIDR range using asynchronous sockets, banner
+grabbing, and automatically generated HTML/JSON reports. Ideal for explaining
+safe reconnaissance techniques during interviews.
+
+Run a scan:
+
+```bash
+cd network-exposure-scanner
+python3 network_exposure_scanner.py 192.168.1.0/24 \\
+  --ports 22,80,443,3389 \\
+  --json report.json \\
+  --html report.html
+```
