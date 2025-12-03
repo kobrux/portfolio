@@ -1,27 +1,38 @@
-# Portfolio
+## Portfolio
 
-Curated projects that showcase practical scripting and application skills. Share this repository with future employers to highlight recent work.
+Curated projects that showcase practical scripting and application skills.
 
-## Projects
+### Wi-Fi Channel Viewer (`wifi-channel-tool/`)
 
-### 1. Wi-Fi Channel Viewer (`wifi-channel-tool/`)
-Cross-platform CLI + GUI app that reports the Wi-Fi channel of the active network. Demonstrates Python scripting, OS detection, subprocess usage, and a lightweight Tkinter interface.
+Cross-platform Python tools that show which Wi‑Fi channel the current network is using.
 
-## How to Use
+- **CLI**: `network_channel.py`  
+  Prints the current Wi‑Fi channel in the terminal.
+- **GUI**: `network_channel_gui.py`  
+  Small Tkinter window with a “Refresh” button that displays the current Wi‑Fi channel.
 
-1. **Initialize Git (first time only):**
-   ```bash
-   cd ~/portfolio
-   git init
-   git add .
-   git commit -m "Add Wi-Fi channel viewer"
-   ```
-2. **Create a new GitHub repo named `portfolio`** (via the GitHub UI).
-3. **Add the remote and push:**
-   ```bash
-   git remote add origin git@github.com:kobrux/portfolio.git
-   git push -u origin main
-   ```
-   Replace the remote URL with HTTPS if you prefer.
+#### Requirements
+- Python 3.10+ installed
+- macOS or Linux
 
-Once pushed, send the repo link (`https://github.com/kobrux/portfolio`) to future workplaces.
+#### Run the CLI
+```bash
+cd wifi-channel-tool
+chmod +x network_channel.py      # first time only
+./network_channel.py
+```
+
+#### Run the GUI
+```bash
+cd wifi-channel-tool
+chmod +x network_channel_gui.py  # first time only
+./network_channel_gui.py
+```
+
+On macOS, the tools will:
+- Prefer the `airport` command if available.
+- Fall back to `system_profiler SPAirPortDataType` when `airport` is missing.
+
+On Linux, they use:
+- `nmcli` (NetworkManager) when present.
+- `iwconfig` as a fallback.
