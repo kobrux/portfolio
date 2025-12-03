@@ -40,8 +40,7 @@ On Linux, they use:
 ### Network Exposure Scanner (`network-exposure-scanner/`)
 
 Map exposed services across a CIDR range using asynchronous sockets, banner
-grabbing, and automatically generated HTML/JSON reports. Ideal for explaining
-safe reconnaissance techniques during interviews.
+grabbing, and automatically generated HTML/JSON reports. 
 
 #### Run the CLI
 
